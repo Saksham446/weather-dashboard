@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+:root{font-family:'DM Sans',sans-serif;color:#edf1ff;background:#090d19;font-synthesis:none;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;font-optical-sizing:auto;font-weight:400}
+*{box-sizing:border-box}
+body{margin:0;min-width:320px;min-height:100vh}
+button,input{font:inherit}
+button{cursor:pointer}
+button:disabled{opacity:.65;cursor:wait}
+a{color:inherit;text-decoration:none}
+.app-shell{position:relative;isolation:isolate;max-width:1120px;width:calc(100% - 48px);margin:0 auto;padding:0 0 26px;overflow:hidden}
+.ambient{position:absolute;z-index:-1;filter:blur(90px);opacity:.18;pointer-events:none;border-radius:50%}
+.ambient-a{width:380px;height:380px;background:#5664ff;top:180px;left:-250px}
+.ambient-b{width:350px;height:350px;background:#13b8c7;top:600px;right:-250px}
+.topbar{height:82px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #ffffff12}
+.brand{display:flex;align-items:center;gap:10px;font:800 22px Manrope,sans-serif;letter-spacing:-1px}
+.brand-logo{display:grid;place-items:center;width:39px;height:39px;border:1px solid #6774ff4a;background:#6574ff18;color:#a5b4fc;border-radius:13px}
+.brand-light{color:#92a3ff}
+.brand-badge{font:600 9px 'DM Sans',sans-serif;letter-spacing:1.5px;color:#8d99b7;border:1px solid #ffffff1b;border-radius:5px;padding:4px 6px;margin-left:5px}
+.header-actions{display:flex;align-items:center;gap:20px}
+.live-label{font-size:10px;letter-spacing:1.5px;color:#8f9bb7;display:flex;align-items:center;gap:8px}
+.live-dot{width:7px;height:7px;border-radius:50%;background:#54e0a1;box-shadow:0 0 10px #54e0a166;display:inline-block}
+.unit-switch{display:flex;gap:3px;padding:4px;background:#131a2c;border:1px solid #ffffff12;border-radius:9px;color:#8792ac}
+.unit-switch span{padding:6px 9px;border-radius:6px;font-size:12px}
+.unit-switch .selected{background:#6574ff;color:white}
+.welcome{text-align:center;padding:49px 0 26px}
+.eyebrow{font-size:10px;font-weight:700;letter-spacing:2.2px;color:#9ba9cb;display:flex;justify-content:center;align-items:center;gap:9px}
+.eyebrow-line{height:1px;width:24px;background:#8c9aff}
+.welcome h1{font:800 clamp(32px,5vw,49px)/1.18 Manrope,sans-serif;letter-spacing:-2.2px;margin:16px 0 10px}
+.welcome h1 span{background:linear-gradient(100deg,#9ea9ff,#65d6e6);background-clip:text;-webkit-background-clip:text;color:transparent}
+.welcome p{color:#8995b0;font-size:14px;margin:0}
+.search-box{display:flex;align-items:center;gap:12px;max-width:650px;margin:0 auto 27px;padding:8px 9px 8px 17px;border:1px solid #ffffff17;background:#111729;border-radius:14px;color:#7e8ba8;box-shadow:0 12px 35px #00000014}
+.search-box input{flex:1;min-width:0;outline:none;border:0;background:transparent;color:#eef2ff;font-size:13px}
+.search-box input::placeholder{color:#687590}
+.search-box button{display:flex;align-items:center;justify-content:center;gap:7px;border:0;border-radius:9px;padding:11px 17px;background:#7180ff;color:white;font-size:12px;font-weight:700;box-shadow:0 4px 18px #7180ff2c}
+.search-box button:hover{background:#8490ff}
+.hero-card{position:relative;display:grid;grid-template-columns:1fr .9fr;min-height:300px;border:1px solid #ffffff17;border-radius:22px;overflow:hidden;background:linear-gradient(112deg,#151d32 0%,#12182b 52%,#19243b 100%);box-shadow:0 25px 70px #00000024}
+.hero-main{padding:28px 32px 47px;position:relative;z-index:1}
+.location{display:flex;align-items:center;gap:7px;font-size:13px;color:#c4cce2}
+.location svg{color:#9aa8ff}
+.current-label{font-size:9px;letter-spacing:2px;font-weight:700;color:#8491b2;margin:28px 0 3px}
+.hero-temperature{display:flex;align-items:center;gap:20px}
+.hero-temperature>span{font:700 clamp(62px,8vw,83px)/1 Manrope,sans-serif;letter-spacing:-5px}
+.sun-icon{color:#ffd57c;filter:drop-shadow(0 0 15px #ffcf6c20)}
+.rain-icon{color:#77b9ff}
+.hero-temperature svg{color:#ffd57c}
+.hero-main h2{font:700 19px Manrope,sans-serif;margin:13px 0 4px}
+.feels{font-size:12px;color:#9aa6c2;margin:0}
+.high-low{display:flex;gap:17px;margin-top:13px;font-size:12px;color:#aab6d3}
+.high-low span:first-child{color:#f5ce85}
+.high-low span:last-child{color:#91caff}
+.hero-illustration{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:240px;overflow:hidden;background:radial-gradient(ellipse at 50% 43%,#7180ff21,transparent 58%)}
+.orbit{position:absolute;border:1px solid #b5c1ff15;border-radius:50%;width:230px;height:230px}
+.orbit-two{width:180px;height:180px;border-color:#6be3e91c}
+.hero-sun{width:150px;height:150px;display:grid;place-items:center;border-radius:50%;background:radial-gradient(circle,#7585ff1b,transparent 72%);color:#b4c0ff;filter:drop-shadow(0 0 25px #8191ff35)}
+.hero-sun .sun-icon{color:#ffda83}.hero-sun .rain-icon{color:#82baff}
+.illustration-caption{font-size:9px;font-weight:700;letter-spacing:1.8px;color:#a7b4d6;margin-top:2px}
+.illustration-caption span{color:#7484ff;margin:0 5px}
+.illustration-stats{display:flex;gap:16px;margin-top:13px;color:#a2aec9;font-size:10px}
+.illustration-stats span{display:flex;align-items:center;gap:5px}
+.hero-footer{position:absolute;bottom:0;left:0;right:0;height:40px;padding:0 22px;display:flex;align-items:center;justify-content:space-between;background:#ffffff05;border-top:1px solid #ffffff0d;color:#8491ae;font-size:10px}
+.hero-footer>span{display:flex;align-items:center;gap:8px}
+.hero-footer button{display:flex;align-items:center;gap:6px;border:0;background:transparent;color:#aeb9d4;font-size:11px}
+.metrics-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:13px;margin-top:15px}
+.metric-card{padding:17px 18px 16px;border:1px solid #ffffff13;border-radius:15px;background:linear-gradient(145deg,#141b2d,#101626)}
+.metric-top{display:flex;align-items:center;gap:8px;color:#9ba8c4;font-size:11px}
+.metric-icon{display:grid;place-items:center;color:#a3adff;width:29px;height:29px;border-radius:9px;background:#7786ff16}
+.metric-value{display:block;font:700 26px Manrope,sans-serif;letter-spacing:-.7px;margin:15px 0 3px}
+.metric-detail{font-size:10px;color:#74819f}
+.section{margin-top:30px}
+.section-heading{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:13px}
+.section-kicker{font-size:9px;font-weight:700;letter-spacing:1.7px;color:#8996ba}
+.section-heading h2{display:flex;align-items:center;gap:9px;font:700 19px Manrope,sans-serif;letter-spacing:-.5px;margin:7px 0 0}
+.section-heading h2 svg{color:#9ba8ff}
+.section-pill{font-size:9px;letter-spacing:1.3px;color:#8997b8;border:1px solid #ffffff17;border-radius:6px;padding:7px 9px}
+.hourly-card,.forecast-card{border:1px solid #ffffff13;border-radius:15px;background:#111727}
+.hourly-card{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));padding:14px 8px}
+.hour-item{display:flex;align-items:center;flex-direction:column;gap:12px;padding:13px 5px;border-right:1px solid #ffffff0b}
+.hour-item:last-child{border:0}
+.hour-time{font-size:11px;color:#9ba7c1}
+.hour-item>strong{font:700 18px Manrope,sans-serif}
+.hour-rain{display:flex;align-items:center;gap:3px;font-size:10px;color:#8bbdff}
+.hour-now{background:#7585ff10;border:1px solid #7785ff38;border-radius:11px}
+.hour-now .hour-time{color:#aeb8ff}
+.forecast-card{padding:0 19px}
+.forecast-row{display:grid;grid-template-columns:1fr 42px 1.25fr 1.4fr 45px;gap:12px;align-items:center;padding:15px 0;border-bottom:1px solid #ffffff0d}
+.forecast-row:last-child{border:0}
+.forecast-day{display:flex;flex-direction:column;gap:3px}
+.forecast-day strong{font-size:12px}
+.forecast-day span{font-size:10px;color:#7785a4}
+.forecast-condition{font-size:11px;color:#9ca8c2}
+.forecast-temperatures{display:flex;align-items:center;justify-content:flex-end;gap:10px;font-size:11px;font-weight:600}
+.forecast-temperatures>span:last-child{color:#8793b0}
+.temp-track{height:5px;width:65px;background:linear-gradient(90deg,#77a7ff,#ffd58a);border-radius:5px}
+.forecast-rain{display:flex;align-items:center;gap:4px;color:#8dbfff;font-size:10px;justify-content:flex-end}
+.sun-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px;margin-top:24px}
+.sun-card{position:relative;overflow:hidden;min-height:145px;border:1px solid #ffffff13;border-radius:16px;padding:18px 21px;background:linear-gradient(120deg,#1b2035,#13192a)}
+.sunset-card{background:linear-gradient(120deg,#282039,#17182c)}
+.sun-card-title{display:flex;align-items:center;gap:8px;color:#c1c9e0;font-size:12px}
+.sunrise-card .sun-card-title svg,.sunrise-card .sun-arc{color:#ffd17b}
+.sunset-card .sun-card-title svg,.sunset-card .sun-arc{color:#c0a3ff}
+.sun-card>strong{display:block;font:700 27px Manrope,sans-serif;margin-top:14px}
+.sun-card>p{font-size:10px;color:#8895b1;margin:4px 0 0}
+.sun-arc{position:absolute;right:26px;bottom:-17px;opacity:.17}
+.footer{display:flex;align-items:center;justify-content:space-between;gap:15px;border-top:1px solid #ffffff12;margin-top:34px;padding-top:20px;color:#6f7c98;font-size:10px}
+.footer-brand{display:flex;align-items:center;gap:7px;font:700 14px Manrope,sans-serif;color:#aeb9dc}
+.footer-brand svg{color:#9daaff}
+.error-box{display:flex;align-items:center;justify-content:space-between;gap:15px;padding:14px 17px;border:1px solid #ff7b7b44;border-radius:12px;color:#ffb1b1;background:#ff62620b;font-size:13px;margin-bottom:20px}
+.error-box button{border:1px solid #ff7b7b55;background:transparent;color:#ffb1b1;border-radius:7px;padding:7px 10px}
+.loading-screen{min-height:270px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;color:#aab5ff}
+.loading-screen p{font-size:13px;color:#919db8}
+.spin{animation:spin 1s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+@media(min-width:1300px){.app-shell{max-width:1050px}}
+@media(max-width:700px){.app-shell{width:calc(100% - 28px)}.topbar{height:68px}.brand{font-size:19px}.brand-badge{display:none}.header-actions{gap:10px}.live-label{font-size:8px;letter-spacing:.7px}.welcome{padding:38px 0 23px}.welcome h1{letter-spacing:-1.5px}.welcome p{font-size:12px}.search-box{gap:8px;padding-left:12px}.search-box input{font-size:11px}.search-box button{padding:10px 12px;font-size:11px}.hero-card{grid-template-columns:1fr}.hero-main{padding:24px 23px 52px}.current-label{margin-top:23px}.hero-temperature>span{font-size:72px}.hero-illustration{min-height:200px;padding-bottom:15px}.hero-footer{height:39px}.metrics-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.metric-card{padding:14px}.metric-value{font-size:24px}.section{margin-top:25px}.section-heading h2{font-size:17px}.section-pill{font-size:8px;padding:6px}.hourly-card{overflow-x:auto;grid-template-columns:repeat(6,minmax(70px,1fr));padding:8px 4px}.hour-item{gap:10px;padding:12px 4px}.forecast-card{padding:0 12px}.forecast-row{grid-template-columns:.8fr 28px 1fr 1.1fr;gap:7px}.forecast-condition{display:none}.forecast-temperatures{gap:5px}.temp-track{width:28px}.forecast-rain{font-size:9px}.sun-grid{gap:10px}.sun-card{padding:15px;min-height:135px}.sun-card>strong{font-size:24px}.footer{flex-wrap:wrap;justify-content:center;text-align:center}.footer-brand{width:100%;justify-content:center}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
